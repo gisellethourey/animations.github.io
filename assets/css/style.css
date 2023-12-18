@@ -1,0 +1,381 @@
+
+html,body {
+  padding: 0;
+  height: 100%;
+  margin:0;
+  width:100%;
+  font-family: "Pacifico",cursive;
+  background-image: url("../imgs/anillos.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+  background-position:center;
+}
+@media screen and (max-width: 576px) {
+  .grid-container {
+    width:100%;
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "section"
+      "main"
+      "footer";
+    gap: 10px;
+    grid-template-columns:1fr;
+  }
+  menu{
+    display:none;
+  }
+  header {
+    display:grid;
+    grid-area: header;
+    padding: 20px;
+    height:40px;
+  }
+  h1 {
+    color: black;
+    display:flex;
+    justify-content:flex-start;
+    margin-top:5px;
+  }
+  nav {
+    display:inline;
+        padding-left:3px;
+        padding-right:3px;
+        text-decoration:none;
+        height:70px;
+     }
+     ul{
+      display: flex;
+       justify-content: space-around;
+       text-align:center;
+       flex-direction: row;
+       margin-top:-10px;
+       list-style-type: none;
+     }
+     nav, a{
+       color:white;
+       font-size:x-large;
+     }
+     section{
+      display:grid;
+      grid-area:section;
+      height:125px;
+      margin-top:-1000px;
+      color:black;
+    }
+    section, h3{
+    margin-top:1px;
+    display:flex;
+    align-items:flex-start;
+    color:black;
+    }
+    section, p{
+      margin-top:-8px;
+      color:black;
+      display:flex;
+      align-items:flex-start;
+    }
+    main {
+      display:grid;
+      grid-area:main;
+      min-height: 150vh;
+      margin-top:-10px;
+      flex-direction:column;
+    }
+    .card-anillos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      width: 540px;
+      height: 450px; 
+      }
+      .card-anillos h3{
+      color:black;  
+      }
+      .img-anillos{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 450px;
+      height: 450px;
+      margin-top: 10px; 
+      border-radius:50px;  
+      filter: grayscale(100%);
+      transform: rotate(1);
+      transition: transform 3s ease-in;
+      }
+      .img-anillos:hover{
+        filter: grayscale(0%);
+        transform: rotate(360deg);
+      }
+      .card-mesa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        width: 540px;
+        height: 450px; 
+        }
+        .card-mesa h3{
+        color:black;  
+        }
+        .img-mesa{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 450px;
+        margin-top: 10px; 
+        border-radius:50px;
+        filter: grayscale(100%);
+      transform: rotate(1);
+      transition: transform 3s ease-in;  
+        }
+        .img-mesa:hover{
+          filter: grayscale(0%);
+          transform: rotate(360deg);
+        }
+        .card-corazon{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; 
+          width: 540px;
+          height: 450px; 
+          }
+          .card-corazon h3{
+          color:black;  
+          }
+          .img-corazon{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 450px;
+          height: 450px;
+          margin-top: 10px; 
+          border-radius:50px;  
+          filter: grayscale(100%);
+          transform: rotate(1);
+          transition: transform 3s ease-in;
+          }
+          .img-corazon:hover{
+            filter: grayscale(0%);
+            transform: rotate(360deg);
+          }
+          .card-pastel{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            width: 540px;
+            height: 450px; 
+            }
+            .card-pastel h3{
+            color:black;  
+            }
+            .img-pastel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 450px;
+            height: 350px;
+            margin-top: 10px; 
+            border-radius:50px; 
+            filter: grayscale(100%);
+            transform: rotate(1);
+            transition: transform 3s ease-in; 
+            }
+            .img-pastel:hover{
+              filter: grayscale(0%);
+              transform: rotate(360deg);
+            }
+            footer {
+              grid-area: footer;
+              padding: 10px;
+              justify-content:center;
+              text-align: center;
+            }
+            footer, p{
+              justify-content:center;
+              text-align: center; 
+              color:black;
+            }
+}
+@media screen and (min-width: 576px) {
+  .grid-container {
+    width:100%;
+      display: grid;
+      grid-template-areas:
+      "header header header header"
+      "menu main main main"
+      "footer footer footer footer";
+      gap: 10px;
+}
+nav{
+  display:none;
+}
+header{
+  display: grid;
+  grid-area:header;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+menu{
+  display: flex;
+flex-direction: column;
+justify-content:flex-start;
+align-items: center;
+font-size: large;
+margin-top: 10px;
+height:100%;
+}
+menu, a{
+  color:black;
+}
+main{
+  display:grid;
+  grid-area:main;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top:10px;
+  gap: 1%;
+  margin-bottom: auto;
+  height:100%;
+}
+  .card-anillos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 540px;
+    height: 450px; 
+    }
+    .card-anillos h3{
+    color:black;  
+    }
+    .img-anillos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    margin-top: 10px; 
+    border-radius:50px;  
+    filter: grayscale(100%);
+    transform: rotate(1);
+    transition: transform 3s ease-in;
+    }
+    .img-anillos:hover{
+      filter: grayscale(0%);
+      transform: rotate(360deg);
+    }
+    .card-mesa{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      width: 540px;
+      height: 450px; 
+      }
+      .card-mesa h3{
+      color:black;  
+      }
+      .img-mesa{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 450px;
+      height: 450px;
+      margin-top: 10px; 
+      border-radius:50px;
+      filter: grayscale(100%);
+    transform: rotate(1);
+    transition: transform 3s ease-in;  
+      }
+      .img-mesa:hover{
+        filter: grayscale(0%);
+        transform: rotate(360deg);
+      }
+      .card-corazon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        width: 540px;
+        height: 450px; 
+        }
+        .card-corazon h3{
+        color:black;  
+        }
+        .img-corazon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 450px;
+        margin-top: 10px; 
+        border-radius:50px;  
+        filter: grayscale(100%);
+        transform: rotate(1);
+        transition: transform 3s ease-in;
+        }
+        .img-corazon:hover{
+          filter: grayscale(0%);
+          transform: rotate(360deg);
+        }
+        .card-pastel{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; 
+          width: 540px;
+          height: 450px; 
+          }
+          .card-pastel h3{
+          color:black;  
+          }
+          .img-pastel{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 450px;
+          height: 350px;
+          margin-top: 10px; 
+          border-radius:50px; 
+          filter: grayscale(100%);
+          transform: rotate(1);
+          transition: transform 3s ease-in; 
+          }
+          .img-pastel:hover{
+            filter: grayscale(0%);
+            transform: rotate(360deg);
+          }
+          footer {
+            display:grid;
+            grid-area: footer;
+            padding: 10px;
+            justify-content:center;
+            text-align: center;
+          }
+          footer, p{
+            justify-content:center;
+            text-align: center; 
+            color:black;
+          }
+          section{
+            display:none;
+          }
+}
+
+
